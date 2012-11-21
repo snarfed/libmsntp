@@ -1,0 +1,55 @@
+libmsntp 1.6a
+http://snarfed.org/libmsntp
+
+Copyright 2005 Ryan Barrett <libmsntp@ryanb.org>
+Copyright 1996-2000 N.M. Maclaren <nmm1@cam.ac.uk>
+
+--------
+OVERVIEW
+--------
+
+libmsntp is a full-featured, compact, portable SNTP library. SNTP (RFC 2030) is
+a simplified version of NTP (RFC 1305), which allows precise synchronization of
+system clocks over a best-effort network. libmsntp provides SNTP client and
+server functionality in a shared library with a simple API.
+
+libmsntp is implemented as a thin layer on top of msntp, N.M. Maclaren's
+command-line SNTP utility. msntp is compact, straightforward, and elegant, and
+I'm indebted to Nick, and to the Cambridge High Performance Computing Facility,
+for providing the msntp source to the public.
+
+For more information on msntp, see README.msntp or visit:
+
+  http://www.hpcf.cam.ac.uk/export/
+
+--------
+BUILDING
+--------
+
+To build, open Makefile and uncomment the options for your particular platform.
+Then, just type make. If make isn't GNU make, you may need to use gmake
+instead. See README.msntp for detailed information.
+
+----------
+INSTALLING
+----------
+
+To install, type "make install". You may need to be the superuser. libmsntp
+installs into /usr/local by default; to install to a different location, edit
+the Makefile and change the PREFIX variable.
+
+-----
+USING
+-----
+
+To use, simply build and install libmsntp, #include <libmsntp.h> in your code,
+and pass the -lmsntp flag to gcc. For more information, see libmsntp.h. Also,
+example.c is a simple command-line tool that demonstrates how to use libmsntp.
+You can build it with "make example".
+
+-------------------
+COPYRIGHT & LICENSE
+-------------------
+
+libmsntp is distributed under the GPL. See the LICENSE file for more
+information. Copyright 2005 Ryan Barrett, 1996-2000 N.M. Maclaren.
